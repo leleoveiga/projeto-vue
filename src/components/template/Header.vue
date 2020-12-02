@@ -4,15 +4,20 @@
 			<i class="fa fa-lg" :class="icon"></i>
 		</a>
 		<h1 class="title">{{ title }}</h1>
+		<UserDropdown v-if="!hideUserDropdown" />
 	</header>
 </template>
 
 <script>
+// eslint-disable-next-line no-unused-vars
+import UserDropdown from "./UserDropdown";
+
 export default {
 	name: "Header",
 	props: {
 		title: String,
 		hideToggle: Boolean,
+		hideUserDropdown: Boolean,
 	},
 	computed: {
 		icon() {
@@ -21,6 +26,7 @@ export default {
 				: "fa-angle-right";
 		},
 	},
+	components: { UserDropdown },
 	methods: {
 		toggleMenu() {
 			this.$store.commit("toggleMenu");
@@ -59,7 +65,6 @@ header.header > a.toggle {
 	margin-right: -3%;
 	z-index: 10;
 	justify-self: flex-start;
-	text-decoration: darkkhaki;
 
 	display: flex;
 	justify-content: center;
@@ -67,6 +72,7 @@ header.header > a.toggle {
 }
 
 header.header > a.toggle:hover {
+	color: rgb(199, 199, 199);
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
