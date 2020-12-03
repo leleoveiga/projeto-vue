@@ -62,9 +62,9 @@ header.header > a.toggle {
 	width: 4%;
 	height: 100%;
 	/* "desempurrar" o titulo */
-	margin-right: -3%;
+	/* margin-right: -3%; */
 	z-index: 10;
-	justify-self: flex-start;
+	/* justify-self: flex-start; */
 
 	display: flex;
 	justify-content: center;

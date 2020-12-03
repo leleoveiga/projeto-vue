@@ -9,8 +9,10 @@
 		</div>
 
 		<div class="user-dropdown-content">
-			<a href class="fa fa-cogs"> Adm </a>
-			<a href class="fa fa-sign-out"> Sair </a>
+			<router-link to="/admin">
+				<i class="fa fa-cogs"></i> Gerenciar
+			</router-link>
+			<a href> <i class="fa fa-sign-out"></i> Sair </a>
 		</div>
 	</div>
 </template>
@@ -38,6 +40,7 @@ export default {
 	color: aliceblue;
 	font-weight: 100;
 	height: 100%;
+	padding: 20px;
 }
 
 .user-dropdown:hover {
@@ -64,7 +67,7 @@ export default {
 
 	display: flex;
 	flex-direction: column;
-	align-content: flex-start;
+	/* /* align-content: flex-start; */
 	flex-wrap: wrap;
 
 	visibility: hidden;
@@ -78,6 +81,9 @@ export default {
 }
 
 .user-dropdown-content a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	color: #000;
 	padding: 10px;
 	border-radius: 5px;
