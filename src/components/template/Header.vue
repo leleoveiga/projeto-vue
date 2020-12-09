@@ -1,6 +1,6 @@
 <template>
 	<header class="header">
-		<a class="toggle" @click="toggleMenu">
+		<a class="toggle" @click="toggleMenu" v-if="!hideToggle">
 			<i class="fa fa-lg" :class="icon"></i>
 		</a>
 		<h1 class="title">{{ title }}</h1>
@@ -41,7 +41,7 @@ export default {
 	background: linear-gradient(to right, #1e469a, #49a7c1);
 
 	display: flex;
-	justify-content: center;
+	/* justify-content: center; */
 	align-items: center;
 }
 

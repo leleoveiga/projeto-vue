@@ -12,7 +12,7 @@
 			<router-link to="/admin">
 				<i class="fa fa-cogs"></i> Gerenciar
 			</router-link>
-			<a href> <i class="fa fa-sign-out"></i> Sair </a>
+			<router-link to="/"> <i class="fa fa-sign-out"></i> Sair </router-link>
 		</div>
 	</div>
 </template>
@@ -81,9 +81,12 @@ export default {
 }
 
 .user-dropdown-content a {
-	display: flex;
+	/* font-size: 1.2rem; */
+	/* color: rgb(189, 253, 255); */
+	font-weight: 550;
+	/* display: flex;
 	flex-direction: row;
-	align-items: center;
+	align-items: center; */
 	color: #000;
 	padding: 10px;
 	border-radius: 5px;
@@ -92,5 +95,6 @@ export default {
 .user-dropdown-content a:hover {
 	background-color: rgb(192, 192, 192);
 	text-decoration: none;
+	color: #000;
 }
 </style>
