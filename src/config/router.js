@@ -8,14 +8,14 @@ Vue.use(VueRouter);
 
 const routes = [
 	{
+		name: "admin",
+		path: "/admin",
+		component: AdminPages,
+	},
+	{
 		name: "home",
 		path: "/",
 		component: Home,
-	},
-	{
-		name: "admin",
-		path: "/admin",
-		components: AdminPages,
 	},
 ];
 
